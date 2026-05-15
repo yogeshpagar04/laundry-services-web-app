@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laundry Services</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">LaundryX</div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <div class="user-name">Yogesh</div>
+  </nav>
+
+  <section class="hero">
+
+    <div class="hero-left">
+      <h1>Premium Laundry Services</h1>
+
+      <p>
+        Fast, reliable and affordable laundry solutions
+        for your daily needs.
+      </p>
+
+      <button id="scrollBtn">
+        Book a Service Today
+      </button>
+    </div>
+
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?q=80&w=1200&auto=format&fit=crop" alt="Laundry Image">
+    </div>
+
+  </section>
+
+  <section class="overview">
+
+    <div class="box">
+      <h2>15+</h2>
+      <p>Laundry Services</p>
+    </div>
+
+    <div class="box">
+      <h2>240+</h2>
+      <p>Happy Customers</p>
+    </div>
+
+    <div class="box">
+      <h2>2+</h2>
+      <p>Years Experience</p>
+    </div>
+
+  </section>
+
+  <section class="booking" id="services">
+
+    <div class="services">
+
+      <h2>Our Services</h2>
+
+      <div class="service-card">
+        <h3>Wash & Fold</h3>
+        <p>₹100</p>
+
+        <button onclick="addItem('Wash & Fold',100)">
+          Add Items
+        </button>
+
+        <button onclick="removeItem('Wash & Fold',100)">
+          Remove Now
+        </button>
+      </div>
+
+      <div class="service-card">
+        <h3>Dry Cleaning</h3>
+        <p>₹200</p>
+
+        <button onclick="addItem('Dry Cleaning',200)">
+          Add Items
+        </button>
+
+        <button onclick="removeItem('Dry Cleaning',200)">
+          Remove Now
+        </button>
+      </div>
+
+      <div class="service-card">
+        <h3>Ironing</h3>
+        <p>₹80</p>
+
+        <button onclick="addItem('Ironing',80)">
+          Add Items
+        </button>
+
+        <button onclick="removeItem('Ironing',80)">
+          Remove Now
+        </button>
+      </div>
+
+      <p class="cart-info">
+        Add items to the cart
+      </p>
+
+    </div>
+
+    <div class="cart-section">
+
+      <div class="cart-box">
+
+        <h2>Added Items</h2>
+
+        <ul id="cartItems"></ul>
+
+        <h3>Total: ₹<span id="total">0</span></h3>
+
+      </div>
+
+      <div class="book-box">
+
+        <h2>Book Now</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <button onclick="sendMail()">
+          Book Now
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

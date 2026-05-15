@@ -1,0 +1,176 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#f4f4f4;
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:#0d6efd;
+  color:white;
+}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+}
+
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:50px;
+  min-height:80vh;
+}
+
+.hero-left{
+  width:50%;
+}
+
+.hero-left h1{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.hero-left p{
+  margin-bottom:20px;
+  line-height:1.6;
+}
+
+.hero-left button{
+  padding:12px 20px;
+  border:none;
+  background:#0d6efd;
+  color:white;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+.hero-right img{
+  width:450px;
+  border-radius:10px;
+}
+
+.overview{
+  width:100%;
+  background:#0d6efd;
+  color:white;
+  display:flex;
+  justify-content:space-around;
+  padding:40px 20px;
+}
+
+.box{
+  text-align:center;
+}
+
+.booking{
+  display:flex;
+  gap:30px;
+  padding:50px;
+}
+
+.services{
+  width:50%;
+}
+
+.service-card{
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:10px;
+}
+
+.service-card button{
+  margin-top:10px;
+  margin-right:10px;
+  padding:10px;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+.service-card button:first-of-type{
+  background:green;
+  color:white;
+}
+
+.service-card button:last-of-type{
+  background:red;
+  color:white;
+}
+
+.cart-section{
+  width:50%;
+}
+
+.cart-box,
+.book-box{
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:10px;
+}
+
+.book-box input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+}
+
+.book-box button{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:#0d6efd;
+  color:white;
+  cursor:pointer;
+}
+
+.cart-info{
+  margin-top:20px;
+  font-weight:bold;
+}
+
+@media(max-width:768px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-left,
+  .services,
+  .cart-section{
+    width:100%;
+  }
+
+  .hero-right img{
+    width:100%;
+    margin-top:20px;
+  }
+
+  .booking{
+    flex-direction:column;
+  }
+
+  .navbar{
+    flex-direction:column;
+    gap:10px;
+  }
+
+}
