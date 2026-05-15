@@ -61,7 +61,9 @@ function updateCart(){
 }
 
 (function () {
-  emailjs.init("YOUR_PUBLIC_KEY");
+
+  emailjs.init("public_xxxxx");
+
 })();
 
 function sendMail(){
@@ -84,11 +86,21 @@ function sendMail(){
     return;
   }
 
+  if(cart.length === 0){
+
+    alert("Please add items first");
+
+    return;
+  }
+
   const templateParams = {
 
     customer_name: name,
+
     customer_email: email,
+
     customer_phone: phone,
+
     order_items: cart.map(
       item => item.name
     ).join(", "),
@@ -98,18 +110,26 @@ function sendMail(){
   };
 
   emailjs.send(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
+    "service_xxxxx",
+    "template_xxxxx",
     templateParams
   )
+
   .then(() => {
 
     alert("Booking Successful!");
 
+    cart = [];
+
+    total = 0;
+
+    updateCart();
+
   })
+
   .catch((error) => {
 
-    console.log(error);
+    console.log("Email Error:", error);
 
     alert("Failed to send email");
 
